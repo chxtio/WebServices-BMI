@@ -13,30 +13,23 @@ namespace SoapWebService
     public interface IService1
     {
         [OperationContract]
-        double piValue();
-        [OperationContract]
-        int absValue(int x);
-        [OperationContract]
-        int add2(int x, int y);
-
-        [OperationContract]
-        results computeStat(string str);
-
-
-        [OperationContract]
         double myBMI(int height, int weight); // calculates the BMI.
+
+        [OperationContract]
+        bmi myHealth(int height, int weight); //this API returns the bmi structure,]
+
 
     }
 
     [DataContract]
-    public class results
+    public class bmi
     {
         [DataMember]
-        public int digits { get; set; }
+        public double b { get; set;}
         [DataMember]
-        public int upper_case_letters { get; set; }
+        public string risk { get; set; }
+        [DataMember]
+        public string[] more { get; set; }
+}
 
-        [DataMember]
-        public int lower_case_letters { get; set; }
-    }
 }

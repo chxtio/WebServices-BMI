@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:2844/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:2844/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:2844/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SoapWebService" />
+      <xsd:import schemaLocation="http://localhost:2844/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService1_piValue_InputMessage">
@@ -31,6 +32,18 @@
   <wsdl:message name="IService1_computeStat_OutputMessage">
     <wsdl:part name="parameters" element="tns:computeStatResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_myBMI_InputMessage">
+    <wsdl:part name="parameters" element="tns:myBMI" />
+  </wsdl:message>
+  <wsdl:message name="IService1_myBMI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:myBMIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_myHealth_InputMessage">
+    <wsdl:part name="parameters" element="tns:myHealth" />
+  </wsdl:message>
+  <wsdl:message name="IService1_myHealth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:myHealthResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="piValue">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/piValue" message="tns:IService1_piValue_InputMessage" />
@@ -47,6 +60,14 @@
     <wsdl:operation name="computeStat">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/computeStat" message="tns:IService1_computeStat_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/computeStatResponse" message="tns:IService1_computeStat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="myBMI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/myBMI" message="tns:IService1_myBMI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/myBMIResponse" message="tns:IService1_myBMI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="myHealth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/myHealth" message="tns:IService1_myHealth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/myHealthResponse" message="tns:IService1_myHealth_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -80,6 +101,24 @@
     </wsdl:operation>
     <wsdl:operation name="computeStat">
       <soap:operation soapAction="http://tempuri.org/IService1/computeStat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="myBMI">
+      <soap:operation soapAction="http://tempuri.org/IService1/myBMI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="myHealth">
+      <soap:operation soapAction="http://tempuri.org/IService1/myHealth" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

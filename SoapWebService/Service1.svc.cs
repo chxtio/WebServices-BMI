@@ -12,55 +12,34 @@ namespace SoapWebService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public double piValue()
-        {
-            return Math.PI;
-        }
-        public int absValue(int x)
-        {
-            if (x >= 0)
-                return x;
-            else
-                return (-x);
-        }
-        public int add2(int x, int y)
-        {
-            int sum = 0;
-            sum = x + y;
-            return sum;
-        }
-        public results computeStat(string str)
-        {
-            results res = new results();
-            int d = 0, u = 0, l = 0;
-            for (int i = 0; i < str.Length; i++)
-            {
-                if (Char.IsUpper(str[i]))
-                {
-                    u = u + 1;
-                }
-                if (Char.IsLower(str[i]))
-                {
-                    l = l + 1;
-                }
-                if (Char.IsDigit(str[i]))
-                {
-                    d = d + 1;
-                }
-            }
-            res.digits = d;
-            res.upper_case_letters = u;
-            res.lower_case_letters = l;
-
-            return res;
-        }
-
-
 
         // bmi = [weight(lb) / height(in) / height(in)] x 703
         public double myBMI(int height, int weight)
         {
-            return ((weight / height) / height) * 703;
+            double BMI = (weight * 703.0) / (height * height); 
+
+            return BMI;
         }
+
+        public bmi myHealth(int height, int weight)
+        {
+            bmi BMI = new bmi();
+            BMI.b = myBMI(height, weight);
+
+            if (BMI.b < 18)
+                BMI.risk = "You are underweight if BMI is < 18"; // Blue
+            else if (BMI.b < 25)
+                BMI.risk = "You are normal if BMI is ≥ 18 and < 25"; // Green
+            else if (BMI.b < 30)
+                BMI.risk = "You are pre-obese if BMI is between 25 and 30"; // Purple
+            else
+                BMI.risk = "You are obese if BMI is greater than 30"; // Red
+
+            BMI.more = new string[3] { "https://www.cdc.gov/healthyweight/assessing/bmi/index.html", "https://www.nhlbi.nih.gov/health/educational/lose_wt/index.htm", "https://www.ucsfhealth.org/education/body_mass_index_tool/" };
+
+            return BMI;
+
+        }
+
     }
 }

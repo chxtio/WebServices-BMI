@@ -90,6 +90,83 @@ namespace SoapConsoleClient.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="bmi", Namespace="http://schemas.datacontract.org/2004/07/SoapWebService")]
+    [System.SerializableAttribute()]
+    public partial class bmi : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double bField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] moreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string riskField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double b {
+            get {
+                return this.bField;
+            }
+            set {
+                if ((this.bField.Equals(value) != true)) {
+                    this.bField = value;
+                    this.RaisePropertyChanged("b");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] more {
+            get {
+                return this.moreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.moreField, value) != true)) {
+                    this.moreField = value;
+                    this.RaisePropertyChanged("more");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string risk {
+            get {
+                return this.riskField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.riskField, value) != true)) {
+                    this.riskField = value;
+                    this.RaisePropertyChanged("risk");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
@@ -117,6 +194,18 @@ namespace SoapConsoleClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/computeStat", ReplyAction="http://tempuri.org/IService1/computeStatResponse")]
         System.Threading.Tasks.Task<SoapConsoleClient.ServiceReference1.results> computeStatAsync(string str);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/myBMI", ReplyAction="http://tempuri.org/IService1/myBMIResponse")]
+        double myBMI(int height, int weight);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/myBMI", ReplyAction="http://tempuri.org/IService1/myBMIResponse")]
+        System.Threading.Tasks.Task<double> myBMIAsync(int height, int weight);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/myHealth", ReplyAction="http://tempuri.org/IService1/myHealthResponse")]
+        SoapConsoleClient.ServiceReference1.bmi myHealth(int height, int weight);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/myHealth", ReplyAction="http://tempuri.org/IService1/myHealthResponse")]
+        System.Threading.Tasks.Task<SoapConsoleClient.ServiceReference1.bmi> myHealthAsync(int height, int weight);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -176,6 +265,22 @@ namespace SoapConsoleClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task<SoapConsoleClient.ServiceReference1.results> computeStatAsync(string str) {
             return base.Channel.computeStatAsync(str);
+        }
+        
+        public double myBMI(int height, int weight) {
+            return base.Channel.myBMI(height, weight);
+        }
+        
+        public System.Threading.Tasks.Task<double> myBMIAsync(int height, int weight) {
+            return base.Channel.myBMIAsync(height, weight);
+        }
+        
+        public SoapConsoleClient.ServiceReference1.bmi myHealth(int height, int weight) {
+            return base.Channel.myHealth(height, weight);
+        }
+        
+        public System.Threading.Tasks.Task<SoapConsoleClient.ServiceReference1.bmi> myHealthAsync(int height, int weight) {
+            return base.Channel.myHealthAsync(height, weight);
         }
     }
 }
