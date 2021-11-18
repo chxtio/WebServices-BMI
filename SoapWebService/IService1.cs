@@ -12,7 +12,7 @@ namespace SoapWebService
     [ServiceContract]
     public interface IService1
     {
-     [OperationContract]
+        [OperationContract]
         double piValue();
         [OperationContract]
         int absValue(int x);
@@ -21,6 +21,10 @@ namespace SoapWebService
 
         [OperationContract]
         results computeStat(string str);
+
+
+        [OperationContract]
+        double myBMI(int height, int weight); // calculates the BMI.
 
     }
 

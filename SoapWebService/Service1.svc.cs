@@ -54,5 +54,13 @@ namespace SoapWebService
 
             return res;
         }
+
+
+
+        // bmi = [weight(lb) / height(in) / height(in)] x 703
+        public double myBMI(int height, int weight)
+        {
+            return ((weight / height) / height) * 703;
+        }
     }
 }
