@@ -1,0 +1,7 @@
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapWebService\bin\SoapWebService.dll.config
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapWebService\bin\SoapWebService.dll
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapWebService\bin\SoapWebService.pdb
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapWebService\obj\Debug\SoapWebService.csprojAssemblyReference.cache
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapWebService\obj\Debug\SoapWebService.csproj.CoreCompileInputs.cache
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapWebService\obj\Debug\SoapWebService.dll
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapWebService\obj\Debug\SoapWebService.pdb

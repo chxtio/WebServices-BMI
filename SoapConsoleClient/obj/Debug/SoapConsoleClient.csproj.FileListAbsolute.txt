@@ -1,0 +1,7 @@
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapConsoleClient\bin\Debug\SoapConsoleClient.exe.config
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapConsoleClient\bin\Debug\SoapConsoleClient.exe
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapConsoleClient\bin\Debug\SoapConsoleClient.pdb
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapConsoleClient\obj\Debug\SoapConsoleClient.csprojAssemblyReference.cache
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapConsoleClient\obj\Debug\SoapConsoleClient.csproj.CoreCompileInputs.cache
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapConsoleClient\obj\Debug\SoapConsoleClient.exe
+D:\OneDrive\! F21\ASU\CSE 598 (ASAD)\projects\WebServices-BMI\SoapConsoleClient\obj\Debug\SoapConsoleClient.pdb
